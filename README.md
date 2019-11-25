@@ -1,24 +1,29 @@
-# README
+```
+git clone https://github.com/kuro525/WebCampMentor-Rails-Sutudy.git
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+docker-compose build
+```
 
-Things you may want to cover:
+```
+docker-compose up -d
+```
 
-* Ruby version
+```
+docker-compose run web bundle exec rake db:create
+```
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+#### Migrate
 
-* Database initialization
+```
+docker-compose run web rake db:migrate
+```
 
-* How to run the test suite
+#### seed
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose run web rake db:seed
+```
